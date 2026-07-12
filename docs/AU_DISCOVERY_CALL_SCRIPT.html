@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>AU Discovery Call Script</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <style>
+    :root { color-scheme: light; }
+    * { -webkit-text-size-adjust:100%; box-sizing:border-box; }
+    body { max-width:840px; margin:0 auto; padding:26px 20px 90px;
+      font-family:-apple-system,"Inter","Segoe UI",Helvetica,Arial,sans-serif;
+      line-height:1.6; color:#221f18; background:#faf8f2; }
+    h1,h2,h3,h4 { line-height:1.25; margin:1.35em 0 .45em; font-weight:800; letter-spacing:-.01em; }
+    h1 { font-size:1.7em; color:#8a6a12; border-bottom:3px solid #e0b64b; padding-bottom:.28em; }
+    h2 { font-size:1.25em; border-bottom:1px solid #ecdfbf; padding-bottom:.22em; color:#3a352a; }
+    h3 { font-size:1.05em; color:#6b520e; }
+    p,li { font-size:15.5px; }
+    a { color:#8a6a12; text-underline-offset:2px; overflow-wrap:anywhere; }
+    code { background:rgba(140,110,20,.13); padding:.1em .38em; border-radius:4px; font-size:.86em; overflow-wrap:anywhere; }
+    pre { position:relative; background:#0b0b0b; color:#f2ecda; padding:34px 15px 15px; border-radius:9px;
+      border-left:3px solid #e0b64b; font-size:14px; line-height:1.55; white-space:pre-wrap; overflow-wrap:anywhere; }
+    pre code { background:none; color:inherit; padding:0; white-space:pre-wrap; font-size:inherit; }
+    blockquote { border-left:3px solid #e0b64b; margin:1em 0; padding:.5em 1.05em;
+      background:rgba(224,182,75,.10); border-radius:0 7px 7px 0; color:#5a5342; }
+    table { border-collapse:collapse; width:100%; margin:1em 0; font-size:14px; display:block; overflow-x:auto; }
+    th,td { border:1px solid #e6dcc4; padding:8px 11px; text-align:left; vertical-align:top; }
+    th { background:#0b0b0b; color:#e0b64b; }
+    tr:nth-child(even) td { background:rgba(224,182,75,.05); }
+    hr { border:none; border-top:1px solid #ecdfbf; margin:1.7em 0; }
+    .back { display:inline-block; margin:0 0 6px; padding:10px 17px; background:#0b0b0b; color:#e0b64b !important;
+      text-decoration:none; border-radius:8px; font-size:14px; font-weight:700; }
+    @media (max-width:560px){
+      body { padding:16px 13px 70px; }
+      h1 { font-size:1.4em; } h2 { font-size:1.12em; }
+      p,li { font-size:16px; }
+      pre { font-size:14.5px; }
+    }
+  </style>
+</head>
+<body>
+<a class="back" href="../index.html">&larr; Back to all templates</a>
+<header id="title-block-header">
+<h1 class="title">AU Discovery Call Script</h1>
+</header>
+<h1 id="au-discovery-call-script--arvin-mondano--gbp--local-seo">AU
+Discovery Call Script — Arvin Mondano · GBP &amp; Local SEO</h1>
+<blockquote>
+<p><strong>CLOSER framework</strong> (locked 2026-05-15) adapted for the
+Australia lane, 2026-07-02. <strong>Offer:</strong> STARTER US$197/mo ·
+GROWTH US$297/mo ⭐ <em>(intended winner)</em> · DOMINATION from
+US$997/mo by-quote + Foundation Build from US$497 (see
+<code>PRICING_AND_KPIS.md</code>). <strong>Context:</strong> prospect
+usually replied to the cold email about THEIR map ranking, or typed
+"audit". This call often doubles as the <strong>15-min audit
+walkthrough</strong> — the geo-grid IS your demo. <strong>Hard time-box:
+20 minutes.</strong> C 2 · L 1 · O 6-8 · S 2 · E 3-4 · R 2-3.
+<strong>Register:</strong> Owners in these markets are direct and
+allergic to hype. Short sentences, concrete numbers, no corporate
+filler, no pressure theatrics. Never mention PH pricing, "agents", or
+any tool name (Local Falcon = "my rank tracker").</p>
+</blockquote>
+<hr />
+<h2 id="pre-call-5-min-before">Pre-call (5 min before)</h2>
+<ul class="task-list">
+<li><label><input type="checkbox" />Local Falcon geo-grid for their
+business generated and open, ready to screen-share</label></li>
+<li><label><input type="checkbox" />Their GBP open in another tab:
+review count, rating, last post, photos</label></li>
+<li><label><input type="checkbox" />Top-3 competitors for "{niche}
+{suburb}" noted</label></li>
+<li><label><input type="checkbox" />Tracker row open (Airtable "AU
+Outreach — Arvin GBP") — log baselines DURING the call</label></li>
+<li><label><input type="checkbox" />Know your two proof lines cold:
+<strong>Dream Nails — ranked #1 in 9 days, and in under a month she's on
+40+ five-star reviews</strong> · <strong>Asia's Lashes — #1 in its city
+in 13 days</strong></label></li>
+</ul>
+<hr />
+<h2 id="c--clarify-2-min">C — Clarify (2 min)</h2>
+<p><strong>Q0 — always first:</strong></p>
+<blockquote>
+<p>"Before we dive in — my email was one of dozens you got that week.
+What made this one worth a reply?"</p>
+</blockquote>
+<p><em>Listen for which line hooked them (the rank? the review gap? the
+guarantee?). That's the pain — sell to THAT for the rest of the
+call.</em></p>
+<p><strong>Then the pipe-analogy, AU variant:</strong></p>
+<blockquote>
+<p>"Quick one before the numbers — if 50 new clients found you on Google
+tomorrow, could you actually fit them in, or would something break
+first?"</p>
+</blockquote>
+<p><em>Capacity answer tells you Starter vs Growth. "We'd cope easily" =
+under-booked = visibility pain is real. "We'd drown" = ops pain → they
+need the booking/win-back side too.</em></p>
+<p><strong>Forward-thinking screen (filters crisis-buyers who
+churn):</strong></p>
+<blockquote>
+<p>"And where do you want the business to be by Christmas — same size
+but fuller books, or growing past that?"</p>
+</blockquote>
+<ul>
+<li>✅ Growth framing → good client, proceed</li>
+<li>❌ "I just need to stop the bleeding this month" → crisis-buyer; be
+honest that reviews compound over 30-90 days, don't overpromise</li>
+</ul>
+<hr />
+<h2 id="l--label-1-min">L — Label (1 min)</h2>
+<blockquote>
+<p>"So just so I've got it right — when someone in {suburb} searches
+'{niche} near me', you're sitting around #{rank}, the top 3 are taking
+roughly 70% of those clicks, and that's bookings going to {competitor}
+that should be yours. Fair?"</p>
+</blockquote>
+<p><em>Precise, not sympathetic. Let them say "yeah, exactly." Don't add
+problems they didn't state.</em></p>
+<hr />
+<h2 id="o--overview--live-reveal-6-8-min--deepest-segment">O — Overview
++ Live Reveal (6-8 min — deepest segment)</h2>
+<h3 id="the-live-ranking-reveal-your-killer-3-minutes">The Live Ranking
+Reveal (your killer 3 minutes)</h3>
+<p>Share your screen with THEIR geo-grid heat-map:</p>
+<blockquote>
+<p>"This is your suburb, split into a grid — every dot is where a
+customer might be standing when they search '{niche}'. Green means you
+show top-3 on their phone. Red means you're invisible. <em>[pause — let
+them count the red]</em> You're green right here around the shop, and
+red from about {landmark} out. Every red dot is someone booking
+{competitor} instead."</p>
+</blockquote>
+<p><em>Say nothing for 5 seconds. The owner does the math themselves —
+that silence closes harder than any pitch.</em></p>
+<h3
+id="roi-probe-adapted-5-q--capture-all-of-these-in-the-tracker-as-baselines">ROI
+probe (adapted 5-Q — capture ALL of these in the tracker as
+baselines)</h3>
+<ol type="1">
+<li>"What's an average visit worth — cut, set, treatment, roughly?" →
+<strong>$ ticket</strong></li>
+<li>"How many new faces walk in per month right now?" → <strong>new
+clients/mo</strong></li>
+<li>"How many of those come back regularly?" → <strong>repeat rate /
+LTV</strong></li>
+<li>"Who handles your Google page and review-chasing today — you, or
+nobody?" → <strong>hours + neglect</strong></li>
+<li>"Do you keep customer contact details anywhere — booking system,
+phone, notebook?" → <strong>list exists?</strong> <em>(gates the
+guarantee — see E)</em></li>
+</ol>
+<h3 id="audit-questions">Audit questions</h3>
+<ol start="6" type="1">
+<li>"What have you tried already — an agency, a nephew, DIY?"</li>
+<li>"What actually moved the needle, what was a waste?"</li>
+<li>"If nothing changes, where's the Google page in 6 months?"
+<em>(competitors' review counts only go up)</em></li>
+</ol>
+<p><strong>Label the gap, Clay verbatim adapted:</strong></p>
+<blockquote>
+<p>"Right — so you've got a genuinely good {niche} business, {rating}★
+average proves it. You're close. You're just missing the machine that
+turns happy clients into reviews and reviews into map position. That's
+the one piece."</p>
+</blockquote>
+<hr />
+<h2 id="s--sell-the-vacation-2-min">S — Sell the Vacation (2 min)</h2>
+<p><strong>Outcome-first, no tool names:</strong></p>
+<blockquote>
+<p>"Here's what running with me looks like. Every client who walks out
+happy gets one tap to leave you a Google review — the count climbs every
+single week on autopilot. Anyone with a concern reaches YOU privately
+first, so you can make it right — and they can always still post
+publicly, nobody gets blocked. That's the Feedback Concierge. Your
+profile gets fully optimised so Google actually understands what you do
+and where. Past clients get a win-back message so quiet weeks fill
+themselves. And every month you get a one-page report: reviews, your map
+heat-map turning green, and Google's own numbers — calls, clicks,
+bookings."</p>
+</blockquote>
+<p><strong>The Amazon analogy (verbatim — works
+everywhere):</strong></p>
+<blockquote>
+<p>"Think of it like shopping on Amazon. Two products, same price —
+one's got 1,200 reviews at 4.9 stars, the other's got 23. Which one do
+you buy? Your customers do exactly that on Google Maps. We make you the
+no-brainer choice."</p>
+</blockquote>
+<p><strong>Stop talking. Let them ask the price.</strong> If they don't
+ask within ~30 seconds, the vacation isn't sold — go back to L and
+re-name the pain.</p>
+<h3 id="when-they-ask-the-price">When they ask the price</h3>
+<p><strong>Value-stack anchor first, never the number bare:</strong></p>
+<blockquote>
+<p>"If you bought this piecemeal from an agency — profile optimisation's
+about $750 a month, a review system another $600, reputation monitoring
+$400, the win-back campaigns and social auto-posting another $500,
+proper reporting $300. Call it $2,500 a month, and tools like Podium
+charge $450+ for just the review piece."</p>
+</blockquote>
+<p><strong>Then present the three levels — steer to Growth (the intended
+winner):</strong></p>
+<blockquote>
+<p>"There are three levels, and I'll tell you straight which one I'd
+pick for you.</p>
+<p><strong>Starter's US$197 a month</strong> — that's the review engine:
+your profile optimised, the review campaign to your past customers, the
+smart routing, and your monthly report. It carries the guarantee:
+<strong>10 new 5-star reviews in 30 days or that month's
+free.</strong></p>
+<p><strong>Growth's US$297 — that's the one most salons like yours
+take.</strong> Everything in Starter, <em>plus</em> the win-back
+campaigns that pull your quiet customers back in, the social
+auto-posting, the live dashboard, and full suburb-by-suburb rank
+tracking. The guarantee bumps to <strong>15 reviews or free.</strong>
+For a hundred more, you're not just getting reviews — you're getting
+rebookings, which usually pays for the whole thing on its own."</p>
+</blockquote>
+<p><em>(Only two guarantee conditions, ever — say them plainly: "you
+share your customer list so we can ask them, and you don't block the
+sends. That's it. Most clients land 15 to 40+.")</em></p>
+<p><strong>If they're a clinic / med-spa / dental / multi-location
+(Domination territory):</strong> do NOT quote a tier — quote the
+value.</p>
+<blockquote>
+<p>"For a practice like yours there's a level above that — Domination.
+That's where we get you <em>recommended by Google's AI</em> when people
+ask for a recommendation — and picked up by ChatGPT too — plus the full
+SEO layer (on-page content, citations, technical) and multi-location
+tracking. It starts at US$997 a month and I price it off what one new
+patient is actually worth to you — there's a one-time Foundation Build
+(from US$497) to set it all up. I'll put exact numbers in your proposal
+after this call."</p>
+</blockquote>
+<p><strong>Founding scarcity (never discount — add bonuses
+instead):</strong></p>
+<blockquote>
+<p>"I'm capping the founding intake at 5 clients this month — the rate
+steps up every 5 after that. If you're in this month, that's your locked
+rate. It doesn't go up on you later when the results kick in."</p>
+</blockquote>
+<hr />
+<h2 id="e--explain-away-concerns-3-4-min">E — Explain Away Concerns (3-4
+min)</h2>
+<p><strong>Rule: FIRST response is always a Meta-Model question. Never
+counter-pitch first.</strong></p>
+<table>
+<thead>
+<tr>
+<th>They say</th>
+<th>You ask first</th>
+<th>Then</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>"Too expensive"</td>
+<td>"Compared to what?"</td>
+<td>One new regular client ≈ US$500-1,000/yr. The fee pays for itself at
+one to two new faces a month — the map moves more than that. <strong>If
+they keep pushing → run the ladder in
+<code>NEGOTIATION_VALUE_MENU.md</code>:</strong> re-anchor
+(agency-piecemeal ~US$1,700, guarantee = built-in risk discount) →
+annual 12-for-11 (terms, not price) → bonus (competitor snapshot) →
+LAST: drop a whole tier (Growth→Starter US$197, guarantee intact). Price
+never drops for the same scope; <strong>below US$197 =
+walk.</strong></td>
+</tr>
+<tr>
+<td>"I'm too busy to deal with this"</td>
+<td>"How specifically — what would it need from you?"</td>
+<td>"About 20 minutes at setup, then nothing. It runs without you —
+that's the whole point."</td>
+</tr>
+<tr>
+<td>"I've been burned by SEO people before"</td>
+<td>"What did they actually do — and what did you see for it?"</td>
+<td>"Fair. That's why the guarantee exists: 10 new 5-star reviews in 30
+days or the month's free. You'll SEE the review count and the heat-map —
+not a jargon report."</td>
+</tr>
+<tr>
+<td>"Are these real reviews? Is this allowed?"</td>
+<td>— answer straight, no Meta-Model —</td>
+<td>"100% real and 100% white-hat. Every review comes from YOUR real
+customers — we just make asking systematic instead of hoping. Nobody
+gets blocked from reviewing, nothing's bought, nothing's faked. That's
+also why it's safe — fake reviews get businesses suspended, and I don't
+touch that."</td>
+</tr>
+<tr>
+<td>"I already have a marketing agency"</td>
+<td>"What are they doing on the Google Maps side specifically?"</td>
+<td>"Keep them — ads and socials aren't what I do. I own one channel:
+your Google profile. Most agencies leave that half-managed, which is why
+the grid looks like it does."</td>
+</tr>
+<tr>
+<td>"Why should I trust someone overseas?"</td>
+<td>"What would you need to see to be comfortable?"</td>
+<td>Timezone (city-conditional): <strong>Perth</strong> → "we're in the
+exact same timezone — I'm live when you're live."
+<strong>Sydney/Melbourne/Brisbane</strong> → "I work Australian business
+hours — when your shop opens at 9, I'm already at my desk." Then proof:
+Dream Nails ranked #1 in 9 days and, in under a month, 40+ five-star
+reviews; Italy + Spain clients, 5.0 across the board. "And
+month-to-month means I have to re-earn it every 30 days."</td>
+</tr>
+<tr>
+<td>"Can't I just do this myself?"</td>
+<td>"Totally can — what's stopped you so far?"</td>
+<td>"Nothing I do is secret — it's consistency. Asking every single
+customer, every week, forever. That's what owners never sustain, and the
+algorithm rewards nothing else."</td>
+</tr>
+<tr>
+<td>"I need to think about it"</td>
+<td>"No stress — what specifically would help you decide: the price, the
+process, or whether it'll work for {business}?"</td>
+<td>Answer THAT one thing, then Two-YES close on a follow-up slot.</td>
+</tr>
+<tr>
+<td>"Need to talk to my partner"</td>
+<td>"When are you two next sitting down?"</td>
+<td>"I'll flick you the one-pager so you're not explaining from memory —
+and let's lock 10 minutes the day after. Tuesday or Wednesday?"</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Don't-Solve-On-Call (when they push for the exact how
+mid-call):</strong></p>
+<blockquote>
+<p>"Good question — there are a couple of ways to run that, and I don't
+want to give you a generic answer. Let me test it against your actual
+profile and put the right one in your report. Cool?"</p>
+</blockquote>
+<hr />
+<h2 id="r--reinforce--bamfam-2-3-min">R — Reinforce + BAMFAM (2-3
+min)</h2>
+<p><strong>Never end without locking the next concrete action. Two-YES
+close every time — never "when works for you?"</strong></p>
+<h3 id="level-1--theyre-lukewarm">Level 1 — they're lukewarm</h3>
+<blockquote>
+<p>"Easiest next step: I'll finish your full visibility report — the
+heat-map, your review gap against the top 3, where the ~70% opportunity
+is — completely free, no strings. Then 15 minutes to walk it. Thursday
+morning or Friday arvo?"</p>
+</blockquote>
+<h3 id="level-2--theyre-warm">Level 2 — they're warm</h3>
+<blockquote>
+<p>"Let's just start. I need about 20 minutes from you: you add me as a
+manager on your Google profile — I'll walk you through it, it's three
+clicks — and you send me whatever customer contacts you've got, even if
+it's messy. First review requests go out within 48 hours. Want to do the
+setup Friday this week or Monday?"</p>
+</blockquote>
+<h3 id="level-3--onboard-first-close-the-strongest-move">Level 3 —
+onboard-first close (the strongest move)</h3>
+<p>Run the 20-min setup FIRST (GBP manager access + customer list
+received + first campaign queued). <strong>THEN</strong>, at the
+end:</p>
+<blockquote>
+<p>"Sweet — you're live. I'll send the payment link now: [their tier —
+US$297/mo for Growth, US$197 for Starter], month-to-month, cancel
+anytime, and remember — [15 for Growth / 10 for Starter] new 5-stars in
+30 days or this month's free. Once you approve it, the first requests go
+out tonight."</p>
+</blockquote>
+<p><em>(Send the <strong>PayPal Subscriptions</strong> link for the tier
+they chose. The 20-min sunk-cost effect + seeing it real is what
+converts — same psychology as the PH onboarding-first close, no
+card-hostage feeling.)</em></p>
+<p><strong>Lock the calendar (AU adaptation — no self-text from a PH
+number):</strong></p>
+<blockquote>
+<p>"I'm sending the calendar invite right now while we're on — can you
+accept it so it's in your phone before we hang up?"</p>
+</blockquote>
+<p><strong>End on rapport:</strong> "What's the rest of your day look
+like?" → 60 seconds → "Good as gold. Talk Thursday."</p>
+<hr />
+<h2 id="after-every-call-2-min-non-negotiable">After EVERY call (2 min,
+non-negotiable)</h2>
+<ol type="1">
+<li><strong>Tracker:</strong> status →
+<code>booked</code>/<code>won</code>/<code>lost</code> + Notes:
+baselines (ticket $, new clients/mo, list size, who handles GBP),
+objections hit, next action + date</li>
+<li><strong>Baselines are the Money Slide inputs</strong> — no baseline,
+no ROI proof, no case study, no V2. Non-negotiable.</li>
+<li>Won → onboarding checklist + PayPal plan + calendar the Day-14
+mini-report (early proof beats waiting for Day-30)</li>
+</ol>
+<h2 id="the-math-you-carry-in-your-head-money-slide-salon">The math you
+carry in your head (Money Slide, salon)</h2>
+<ul>
+<li>Top-3 map spots take <strong>~70% of "near me" clicks</strong>
+<em>(same stat as the email + audit template — never mix in other
+numbers)</em></li>
+<li>Rank #1-3 + review engine ⇒ conservatively <strong>+10-15 new
+clients/mo</strong></li>
+<li>US$45 avg ticket, monthly repeat ⇒ <strong>US$55-80k of year-1
+value</strong> ⇒ Growth is ~US$3,564/yr — about <strong>5 cents on the
+dollar</strong> of the value it creates (survives an owner doing the
+arithmetic)</li>
+<li>Clinic version: ONE implant patient ≈ US$5-50K ⇒ that's why
+Domination is by-quote, never flat</li>
+</ul>
+<style>
+  .copybtn{ position:absolute; top:7px; right:7px; background:#e0b64b; color:#0b0b0b; border:none;
+    border-radius:7px; padding:7px 14px; font:800 13px/1 -apple-system,sans-serif; cursor:pointer; }
+  .copybtn:active{ transform:scale(.95); }
+</style>
+<script>
+document.querySelectorAll('pre').forEach(function(pre){
+  var text = (pre.querySelector('code')||pre).innerText;
+  var b = document.createElement('button');
+  b.className='copybtn'; b.type='button'; b.textContent='Copy';
+  b.addEventListener('click', function(){
+    navigator.clipboard.writeText(text).then(function(){
+      b.textContent='Copied ✓';
+      setTimeout(function(){ b.textContent='Copy'; }, 1600);
+    });
+  });
+  pre.appendChild(b);
+});
+</script>
+</body>
+</html>

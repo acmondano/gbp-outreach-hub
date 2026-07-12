@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Member Message Templates — all 4 channels</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <style>
+    :root { color-scheme: light; }
+    * { -webkit-text-size-adjust:100%; box-sizing:border-box; }
+    body { max-width:840px; margin:0 auto; padding:26px 20px 90px;
+      font-family:-apple-system,"Inter","Segoe UI",Helvetica,Arial,sans-serif;
+      line-height:1.6; color:#221f18; background:#faf8f2; }
+    h1,h2,h3,h4 { line-height:1.25; margin:1.35em 0 .45em; font-weight:800; letter-spacing:-.01em; }
+    h1 { font-size:1.7em; color:#8a6a12; border-bottom:3px solid #e0b64b; padding-bottom:.28em; }
+    h2 { font-size:1.25em; border-bottom:1px solid #ecdfbf; padding-bottom:.22em; color:#3a352a; }
+    h3 { font-size:1.05em; color:#6b520e; }
+    p,li { font-size:15.5px; }
+    a { color:#8a6a12; text-underline-offset:2px; overflow-wrap:anywhere; }
+    code { background:rgba(140,110,20,.13); padding:.1em .38em; border-radius:4px; font-size:.86em; overflow-wrap:anywhere; }
+    pre { position:relative; background:#0b0b0b; color:#f2ecda; padding:34px 15px 15px; border-radius:9px;
+      border-left:3px solid #e0b64b; font-size:14px; line-height:1.55; white-space:pre-wrap; overflow-wrap:anywhere; }
+    pre code { background:none; color:inherit; padding:0; white-space:pre-wrap; font-size:inherit; }
+    blockquote { border-left:3px solid #e0b64b; margin:1em 0; padding:.5em 1.05em;
+      background:rgba(224,182,75,.10); border-radius:0 7px 7px 0; color:#5a5342; }
+    table { border-collapse:collapse; width:100%; margin:1em 0; font-size:14px; display:block; overflow-x:auto; }
+    th,td { border:1px solid #e6dcc4; padding:8px 11px; text-align:left; vertical-align:top; }
+    th { background:#0b0b0b; color:#e0b64b; }
+    tr:nth-child(even) td { background:rgba(224,182,75,.05); }
+    hr { border:none; border-top:1px solid #ecdfbf; margin:1.7em 0; }
+    .back { display:inline-block; margin:0 0 6px; padding:10px 17px; background:#0b0b0b; color:#e0b64b !important;
+      text-decoration:none; border-radius:8px; font-size:14px; font-weight:700; }
+    @media (max-width:560px){
+      body { padding:16px 13px 70px; }
+      h1 { font-size:1.4em; } h2 { font-size:1.12em; }
+      p,li { font-size:16px; }
+      pre { font-size:14.5px; }
+    }
+  </style>
+</head>
+<body>
+<a class="back" href="../index.html">&larr; Back to all templates</a>
+<header id="title-block-header">
+<h1 class="title">Member Message Templates — all 4 channels</h1>
+</header>
+<h1
+id="am-systems--arvin-gbp--member-message-templates-international-lane">AM
+Systems · Arvin GBP — Member Message Templates (International lane)</h1>
+<p><strong>One source of truth.</strong> Paste this into a single Google
+Doc, share it (view/comment) with all members, and link it from every
+member's Airtable. Update it in ONE place as we test — never copy
+templates into each base (copies drift).</p>
+<blockquote>
+<p>✅ <strong>Copy is written and send-ready (2026-07-12).</strong> You
+send as <strong>yourself</strong> (your name, your accounts)
+representing the service — never as "Arvin." Refine wording as real
+reply data comes in, but this is usable today.</p>
+</blockquote>
+<hr />
+<h2 id="the-8-rules--every-message-every-channel-non-negotiable">The 8
+rules — every message, every channel (non-negotiable)</h2>
+<ol type="1">
+<li><strong>Question first.</strong> Open with a question, never a
+complaint or a pitch.</li>
+<li><strong>Reveal the gap, never the fix.</strong> Name where they're
+losing (their Map rank, dropping off the map nearby) and stop.
+<strong>Never</strong> mention reviews, citations, schema, "SEO steps" —
+that's free consulting that kills the reply.</li>
+<li><strong>Proof, not claims.</strong> Lead with the proof line — a
+named business, a real number, a tight timeframe. It's the
+<strong>team's</strong> result, so say "<strong>we</strong>," never
+"I."</li>
+<li><strong>Stop at the question mark.</strong> No extra text after the
+CTA — trailing words hand back leverage.</li>
+<li><strong>One CTA.</strong> DMs → <code>Open to it?</code> /
+<code>Worth 5 min?</code> (<strong>never</strong> a calendar link in a
+DM). Email → the booking link (only after they reply).</li>
+<li><strong>Swap the city per prospect.</strong> Never send the wrong
+<code>[[CITY]]</code>. Match their register — plain and human, no
+marketing-speak.</li>
+<li><strong>Outcome language, never tool language.</strong> "Get found
+first / turn 'near me' searches into bookings," never "AI / geo-grid /
+agent / schema."</li>
+<li><strong>Follow up ONLY if they replied.</strong> ⛔ If a prospect
+does <strong>not</strong> reply to your first message, <strong>do NOT
+send a follow-up</strong> — one message, then move on. Message #2 on
+every channel is only for people who already responded.</li>
+</ol>
+<blockquote>
+<p>🚫 <strong>The #1 rule, spelled out: NO chasing silence.</strong>
+Never sent a reply? You never follow up. This protects your personal
+email, Instagram, WhatsApp and LinkedIn accounts — repeatedly messaging
+people who ignored you is the fastest way to get flagged or banned
+(Instagram and WhatsApp especially). One clean message. If they bite,
+keep going. If they're silent, leave them.</p>
+</blockquote>
+<blockquote>
+<p>🔄 <strong>Keep the two proof facts separate:</strong> the studio hit
+<strong>#1 in 9 days</strong>; the <strong>40+ reviews</strong> built up
+<strong>in under a month</strong> after. Never merge them into "40+ in 9
+days" — the ranking and the review count are two different wins.
+(Refresh the review number as it keeps climbing.)</p>
+</blockquote>
+<hr />
+<h2 id="how-the-fill-in-blanks-work">How the fill-in blanks work</h2>
+<p>Swap anything in <code>[[ ]]</code> before sending. Keep the labels
+exact so nothing gets missed:</p>
+<ul>
+<li><code>[[YOUR NAME]]</code> — <strong>your</strong> name (you send as
+yourself, not as Arvin)</li>
+<li><code>[[FIRST NAME]]</code> — owner's first name</li>
+<li><code>[[BUSINESS NAME]]</code> — the business (e.g. "Bella
+Nails")</li>
+<li><code>[[CITY]]</code> — their city/suburb (e.g. "Brisbane")</li>
+<li><code>[[NICHE]]</code> — nail salon / lash studio / beauty salon /
+dental / med-spa</li>
+<li><code>[[RANK]]</code> — their current avg Map rank (from the
+Airtable "Map rank" column)</li>
+<li><code>[[PROOF]]</code> — the current proof line (default below;
+refresh the review count)</li>
+</ul>
+<p><strong>Default <code>[[PROOF]]</code> (use exactly):</strong> <em>"a
+nail studio to #1 on Google in 9 days — and in under a month she's on
+40+ five-star reviews — and a lash studio to #1 in its city in 13
+days."</em></p>
+<hr />
+<h2 id="1--email-e-mail">1 · EMAIL 📧</h2>
+<p><strong>Send manually from your own email · ≤30–40/day · always
+include a postal address + the opt-out line · NO follow-up unless they
+reply (rule 8).</strong></p>
+<h3 id="message-1--the-data-hook">Message 1 — the data hook</h3>
+<p><strong>Subject (pick one, A/B them):</strong></p>
+<ul>
+<li><code>[[CITY]] [[NICHE]] — quick Google Maps question</code></li>
+<li><code>You're showing up around #[[RANK]] in [[CITY]]</code></li>
+<li><code>[[BUSINESS NAME]] on Google Maps (1-page heat-map)</code></li>
+</ul>
+<p><strong>Body:</strong></p>
+<pre><code>Hi [[FIRST NAME]],
+
+I had a look at where [[BUSINESS NAME]] shows up on Google Maps around [[CITY]] — you&#39;re sitting around #[[RANK]] for &quot;[[NICHE]] [[CITY]]&quot;, and dropping off the map a couple of suburbs over.
+
+That matters because ~70% of &quot;near me&quot; clicks go to the top 3 results — so the businesses ranked above you are getting calls that could be yours.
+
+This is what we do: we recently took [[PROOF]]
+
+Want me to send the full 1-page breakdown of where you rank vs the top 3 nearby?
+
+[[YOUR NAME]]
+Google Business Profile &amp; Local SEO — rank.am-systems.net
+[[POSTAL ADDRESS]]
+If you&#39;d rather not hear from me, just reply &quot;no thanks&quot; and I&#39;ll delete your details.</code></pre>
+<h3 id="message-2---send-only-if-they-reply-eg-yes-send-it">Message 2 —
+▶ send ONLY if they reply (e.g. "yes, send it")</h3>
+<blockquote>
+<p>⛔ <strong>No reply to Message 1 = do NOT send this. Move
+on.</strong></p>
+</blockquote>
+<p><strong>Subject:</strong>
+<code>Re: [[CITY]] [[NICHE]] — quick Google Maps question</code></p>
+<pre><code>Thanks [[FIRST NAME]] — here&#39;s exactly what we do and the results, on one page (linked below).
+
+Short version: we get you found first on Google Maps and turn &quot;near me&quot; searches into bookings. Fully managed, from US$197/mo, cancel anytime — with 10 new 5-star reviews in your first 30 days or that month&#39;s free.
+
+Worth a quick 15-min look at your map? Here&#39;s the calendar: https://api.leadconnectorhq.com/widget/booking/njVQFL6jXeuEpbVQHMwp
+
+[[YOUR NAME]]
+Google Business Profile &amp; Local SEO — rank.am-systems.net
+[[POSTAL ADDRESS]]
+If you&#39;d rather not hear from me, just reply &quot;no thanks&quot; and I&#39;ll delete your details.</code></pre>
+<blockquote>
+<p>Link the one-pager (hosted); only attach the PDF once they've
+replied.</p>
+</blockquote>
+<hr />
+<h2
+id="2--whatsapp-speech_balloon-short-mobile-first--3-sentences-max-stop-at-">2
+· WHATSAPP 💬 (short, mobile-first — 3 sentences max, stop at "?")</h2>
+<h3 id="message-1--opener">Message 1 — opener</h3>
+<pre><code>Hi [[FIRST NAME]] — is [[BUSINESS NAME]] still taking new [[NICHE]] clients this month? I noticed you&#39;re sitting around #[[RANK]] on Google Maps in [[CITY]] while a couple of spots nearby pull most of the &quot;near me&quot; calls. We recently got [[PROOF]] — open to it?</code></pre>
+<h3 id="message-2---send-only-if-they-reply">Message 2 — ▶ send ONLY if
+they reply</h3>
+<blockquote>
+<p>⛔ <strong>No reply = no follow-up. Leave them.</strong></p>
+</blockquote>
+<p><strong>If they reply "how / what's involved?"</strong> → 3 outcome
+bullets max, then re-anchor to a call (never list the mechanism):</p>
+<pre><code>Short version: you get found first on Google Maps, &quot;near me&quot; searches turn into bookings, and it&#39;s fully managed so you don&#39;t touch it. Easiest is a quick 10-min call so I can show you your actual map — you free this week?</code></pre>
+<hr />
+<h2 id="3--instagram-dm-camera_flash-casual-warm-reference-their-page">3
+· INSTAGRAM DM 📸 (casual, warm, reference their page)</h2>
+<h3 id="message-1--opener-1">Message 1 — opener</h3>
+<pre><code>Hey [[FIRST NAME]]! Genuinely like what [[BUSINESS NAME]]&#39;s putting out 🙌 quick q — are you still taking new [[NICHE]] clients in [[CITY]]? I had a look and you&#39;re around #[[RANK]] on Google Maps while a couple nearby pull most of the &quot;near me&quot; bookings. We recently got [[PROOF]] — open to it?</code></pre>
+<h3 id="message-2---send-only-if-they-reply-1">Message 2 — ▶ send ONLY
+if they reply</h3>
+<blockquote>
+<p>⛔ <strong>No reply = no follow-up. Instagram flags repeat DMs to
+non-responders — don't risk your account.</strong></p>
+</blockquote>
+<pre><code>Amazing — want me to send a quick snapshot of where [[BUSINESS NAME]] ranks vs the top 3 in [[CITY]]? Or easier, a quick 10-min call and I&#39;ll walk you through it — what suits?</code></pre>
+<hr />
+<h2 id="4--linkedin-dm-link-a-touch-more-professional">4 · LINKEDIN DM
+🔗 (a touch more professional)</h2>
+<h3 id="message-1--connection-note-300-chars">Message 1 — connection
+note (≤300 chars)</h3>
+<pre><code>Hi [[FIRST NAME]] — I help [[CITY]] [[NICHE]] businesses get found first on Google Maps. Took a quick look at [[BUSINESS NAME]] and spotted a gap worth a 2-minute mention. Open to connecting?</code></pre>
+<h3 id="message-2---send-only-if-they-accept-the-connection">Message 2 —
+▶ send ONLY if they accept the connection</h3>
+<pre><code>Thanks for connecting, [[FIRST NAME]]. Quick reason I reached out: [[BUSINESS NAME]] is sitting around #[[RANK]] on Google Maps for &quot;[[NICHE]] [[CITY]]&quot;, and dropping off the map a couple of suburbs over — and ~70% of &quot;near me&quot; clicks go to the top 3. We recently took [[PROOF]] Open to a quick look at where you rank vs the top 3 nearby?</code></pre>
+<h3 id="message-3---send-only-if-they-reply-to-message-2">Message 3 — ▶
+send ONLY if they reply to Message 2</h3>
+<blockquote>
+<p>⛔ <strong>Accepted but never replied? Do NOT chase. Leave
+them.</strong></p>
+</blockquote>
+<pre><code>No worries [[FIRST NAME]] — happy to send a 1-page snapshot of [[BUSINESS NAME]]&#39;s Map ranking vs the top 3 in [[CITY]] whenever it&#39;s useful. Want me to?</code></pre>
+<hr />
+<h2 id="the-proof-asset-all-channels">The proof asset (all
+channels)</h2>
+<p>When a prospect replies and engages, the closer is <strong>their own
+geo-grid heat-map</strong> — green = top 3, red = invisible across their
+catchment. Arvin generates it per engaged lead (not per cold message).
+Ask Arvin in the shared chat once someone replies; attach it to their
+Airtable row. Reuse ONE proof asset — don't record per-prospect.</p>
+<h2 id="ph-lane-later--viber--messenger--sms">PH lane (later) — Viber /
+Messenger / SMS</h2>
+<p>Separate section to be added when we open the PH high-ticket GEO
+lane. Same rules, different channels + register (Taglish, more
+casual).</p>
+<hr />
+<p><em>Owner: Arvin. Members: copy → fill the <code>[[ ]]</code> blanks
+→ send as yourself → log it in your Airtable. Follow up ONLY if they
+replied. Never edit this master; suggest changes via comment. Deeper
+source files: <code>AU_Cold_Email_Sequence.md</code> (full email +
+deliverability), <code>OUTREACH_DOMINATION_INTL.md</code>
+(premium/high-ticket verticals),
+<code>AU_DISCOVERY_CALL_SCRIPT.md</code> (the call).</em></p>
+<style>
+  .copybtn{ position:absolute; top:7px; right:7px; background:#e0b64b; color:#0b0b0b; border:none;
+    border-radius:7px; padding:7px 14px; font:800 13px/1 -apple-system,sans-serif; cursor:pointer; }
+  .copybtn:active{ transform:scale(.95); }
+</style>
+<script>
+document.querySelectorAll('pre').forEach(function(pre){
+  var text = (pre.querySelector('code')||pre).innerText;
+  var b = document.createElement('button');
+  b.className='copybtn'; b.type='button'; b.textContent='Copy';
+  b.addEventListener('click', function(){
+    navigator.clipboard.writeText(text).then(function(){
+      b.textContent='Copied ✓';
+      setTimeout(function(){ b.textContent='Copy'; }, 1600);
+    });
+  });
+  pre.appendChild(b);
+});
+</script>
+</body>
+</html>
