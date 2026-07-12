@@ -33,6 +33,19 @@
   .badge { font-size:10px; font-weight:800; letter-spacing:.04em; text-transform:uppercase;
     background:#fdf6e6; color:#8a6a12; border:1px solid #ecdfbf; padding:5px 10px; border-radius:20px; flex:none; }
   .foot { margin-top:24px; font-size:12px; color:#8a8577; text-align:center; }
+  .tzsec { margin-bottom:24px; }
+  .tzintro { font-size:13.5px; color:#4a4638; margin:0 0 12px; }
+  .tzwrap { overflow-x:auto; -webkit-overflow-scrolling:touch; border-radius:12px; border:1px solid #e2d8c2; }
+  table.tz { border-collapse:collapse; width:100%; min-width:540px; background:#fff; font-size:13px; }
+  table.tz th, table.tz td { text-align:left; padding:10px 12px; border-bottom:1px solid #ece3ce; vertical-align:top; }
+  table.tz thead th { background:#0b0b0b; color:#e0b64b; font-size:11px; font-weight:800; letter-spacing:.03em; text-transform:uppercase; }
+  table.tz thead th span { color:#b89a52; font-weight:600; text-transform:none; letter-spacing:0; }
+  table.tz tbody tr:nth-child(even) td { background:#fbf7ec; }
+  table.tz td:first-child { font-weight:800; color:#221f18; white-space:nowrap; }
+  table.tz .same { color:#1f7a37; font-weight:800; }
+  table.tz .fdr { font-size:9px; font-weight:800; text-transform:uppercase; letter-spacing:.04em; color:#8a6a12;
+    background:#fdf6e6; border:1px solid #ecdfbf; padding:1px 6px; border-radius:20px; margin-left:5px; }
+  .tznote { font-size:12.5px; color:#6b520e; background:#fdf6e6; border:1px solid #ecdfbf; border-radius:10px; padding:11px 14px; margin-top:11px; }
   @media (max-width:520px){
     body { padding:18px 12px 60px; }
     h1 { font-size:20px; }
@@ -50,6 +63,24 @@
   </div>
 
   <div class="hint">📱 <b>On your phone:</b> tap a document below, then tap the gold <b>Copy</b> button on any message block to grab it — no need to select text by hand.</div>
+
+  <div class="tzsec">
+    <h2>🕐 Your client's clock</h2>
+    <div class="tzintro">You're on <b>Manila time</b>. Send in <b>your morning</b> so it lands in your client's business hours — and always quote <b>their</b> local time when booking a call.</div>
+    <div class="tzwrap">
+      <table class="tz">
+        <thead><tr><th>Member</th><th>Cities</th><th>Ahead of you <span>(now)</span></th><th>AU summer <span>(Oct–Apr)</span></th></tr></thead>
+        <tbody>
+          <tr><td>Mark</td><td>Brisbane</td><td>+2 hrs</td><td>+2 hrs <span style="color:#8a8577">(QLD, no change)</span></td></tr>
+          <tr><td>Ryan</td><td>Gold Coast · Sunshine Coast · Newcastle · Canberra</td><td>+2 hrs</td><td>+2h QLD · +3h Newcastle/Canberra</td></tr>
+          <tr><td>Nard</td><td>Adelaide · Wollongong · Geelong</td><td>+1.5h Adelaide · +2h others</td><td>+2.5h · +3h</td></tr>
+          <tr><td>Clyde</td><td>Perth · Hobart</td><td><span class="same">Same as you</span> Perth · +2h Hobart</td><td>Same Perth · +3h Hobart</td></tr>
+          <tr><td>Arvin <span class="fdr">founder</span></td><td>Sydney · Melbourne</td><td>+2 hrs</td><td>+3 hrs</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="tznote"><b>Simple version:</b> Perth runs on your exact clock — send 9am–6pm your time. Everywhere else is ~2h ahead now, so their 9am–6pm workday = <b>your 7am–4pm</b>. After early October, daylight saving adds +1h to every city <b>except</b> Brisbane, Gold Coast, Sunshine Coast (Queensland) and Perth.</div>
+  </div>
 
   <h2>Start here</h2>
   <a class="card" href="docs/MEMBER_MESSAGE_TEMPLATES.html">
